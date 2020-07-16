@@ -31,6 +31,10 @@ function generatePassword() {
 
   for (i = 0; password.length < length; i++) {
 
+    if(lower.checked == false && upper.checked == false && number.checked == false && symbol.checked == false){
+      break;
+    }
+
     if (lower.checked == true) {
       password += getRandomCharacter(lowerChars);
       availableChars.concat(lowerChars);
